@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Fusion API App</title>
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1">
+        <link href="{{  url_for('static', filename='css/bootstrap.min.css')  }}" rel="stylesheet">
+        <link rel="shortcut icon" href="{{  url_for('static', filename='favicon.ico')  }}">
+    </head>
+
+    <body>
+        <div id="heading">
+            <h2>Welcome!</h2>
+        </div>
+
+        <form action="/" method="post">
+            <br>
+
+            <label for="TERM">Whats your favorite food? </label>
+            <input id="TERM" type="text" name="term" placeholder="sushi, mexican, etc."><br>
+            <br>
+
+            <label for="LOCATION">What is your location? </label>
+            <input id="LOCATION" type="text" name="location" placeholder="San Francisco, CA"><br>
+
+            <br>
+
+            <h3>What is your price range?</h3>
+            <input type="radio" name="price" value="1" checked> $<br>
+            <input type="radio" name="price" value="2"> $$ <br>
+            <input type="radio" name="price" value="3"> $$$ <br>
+            <input type="radio" name="price" value="4"> $$$$ <br>
+
+            <br>
+
+            <h3>Only show currently open restuarants?</h3>
+            <input type="radio" name="open" value="true" checked> Open<br>
+            <input type="radio" name="open" value="false"> Closed<br>
+            <input type="radio" name="open" value="both"> Either
+
+            <br><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+    </body>
+
+
+</html>
