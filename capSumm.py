@@ -56,7 +56,7 @@ DEFAULT_TERM = 'sushi'
 DEFAULT_LOCATION = 'San Francisco, CA'
 OPEN_NOW = True
 PRICE = '1'
-SEARCH_LIMIT = 10
+SEARCH_LIMIT = 15
 
 
 def obtain_bearer_token(host, path):

@@ -6,38 +6,43 @@
         <meta name="viewport" content="width=device-width,
         initial-scale=1">
         <link href="{{  url_for('static', filename='css/bootstrap.min.css')  }}" rel="stylesheet">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles2.css') }}">
         <link rel="shortcut icon" href="{{  url_for('static', filename='favicon.ico')  }}">
     </head>
 
     <body>
-        <div id="heading">
-            <h2>Welcome!</h2>
-        </div>
-
+        {% if not data == None %}
         <h1>
             Showing results for {{location}}!
         </h1>
 
         <table class="rwd-table">
         <tr>
-            <th>Name</th>
-            <th>rating</th>
-            <th>location</th>
-            <th>phone #</th>
+            <th align="center">Name</th>
+            <th align="center">Rating</th>
+            <th align="center">Location</th>
+            <th align="center">Phone #</th>
+            <th align="center">Specialty</th>
         </tr>
 
         {% for i in data %}
 
         <tr>
-            <td data-th="Movie Title">{{i.name}}</td>
-            <td data-th="Genre">{{i.rating}}</td>
-            <td data-th="Year">{{i.location.address1}}</td>
-            <td data-th="Gross">{{i.phone}}</td>
+            <td data-th="Name">{{i.name}}</td>
+            <td data-th="Rating">{{i.rating}}</td>
+            <td data-th="Address">{{i.location.address1}}</td>
+            <td data-th="Phone#">{{i.phone}}</td>
+            <td data-th="Category">{{i.categories[0].title}}</td>
         </tr>
 
         {% endfor %}
         </table>
+        {% else %}
 
+        <h1>
+            No results found near {{location}}!
+        </h1>
+        {% endif %}
     </body>
 
 
