@@ -15,16 +15,28 @@
         </div>
 
         <h1>
-            {{location}}
+            Showing results for {{location}}!
         </h1>
+
+        <table class="rwd-table">
+        <tr>
+            <th>Name</th>
+            <th>rating</th>
+            <th>location</th>
+            <th>phone #</th>
+        </tr>
 
         {% for i in data %}
 
-        <p>
-            {{i.image_url}}
-        </p>
+        <tr>
+            <td data-th="Movie Title">{{i.name}}</td>
+            <td data-th="Genre">{{i.rating}}</td>
+            <td data-th="Year">{{i.location.address1}}</td>
+            <td data-th="Gross">{{i.phone}}</td>
+        </tr>
 
         {% endfor %}
+        </table>
 
     </body>
 
