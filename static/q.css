@@ -19,25 +19,27 @@ h3 {
     font-size: 42px;
     text-shadow: 0 0 3px #d12e31;
     font-family: helvetica;
+    padding: 5px;
 }
 h1{
     color: #D12E32;
     text-align: center;
     font-size: 42px;
-    padding-bottom: 30px;
     text-shadow: 0 0 3px #d12e31;
     font-family: helvetica;
+    padding: 5px;
 }
 #mForm{
     margin: auto;
     width: 50%;
     border: 2px solid #1f1f14;
     background-color: #464955;
-    padding: 10px;
+    padding: 40px;
     height:550px;
     border-radius: 5%;
     opacity: .9;
     width: 900px;
+    position: sticky;
 }
 form{
     text-align: center;
@@ -66,14 +68,13 @@ body {
 }
 table {
   background: #012B39;
-  margin-top: 30px;
-  padding-top: 30px;
   border-radius: 0.25em;
   border-collapse: collapse;
   margin: 1em;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
+  padding: 40px;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
@@ -98,4 +99,15 @@ tbody tr {
 }
 tbody tr:hover {
   background: #014055;
+}
+#CR{
+    color: white;
+    z-index: 100;
+    font-family: helvetica;
+    font-size: 16px;
+    position: fixed;
+    bottom:0;
+    text-align:center;
+    left: 36%;
+    padding-top: 40px;
 }
