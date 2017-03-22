@@ -6,15 +6,18 @@
         <meta name="viewport" content="width=device-width,
         initial-scale=1">
         <link href="{{  url_for('static', filename='css/bootstrap.min.css')  }}" rel="stylesheet">
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles2.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='greggg5.css') }}">
         <link rel="shortcut icon" href="{{  url_for('static', filename='favicon.ico')  }}">
     </head>
 
     <body>
+
         {% if not data == None %}
+
         <h1>
-            Showing results for {{location}}!
+            Showing results for {{term}} in {{location}}!
         </h1>
+
 
         <table class="rwd-table">
         <tr>
@@ -39,7 +42,7 @@
         </table>
         {% else %}
 
-        <h1>
+        <h1 id="error">
             No results found near {{location}}!
         </h1>
         {% endif %}

@@ -6,45 +6,47 @@
         <meta name="viewport" content="width=device-width,
         initial-scale=1">
         <link href="{{  url_for('static', filename='css/bootstrap.min.css')  }}" rel="stylesheet">
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles2.css') }}">
-
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='greggg5.css') }}">
         <link rel="shortcut icon" href="{{  url_for('static', filename='favicon.ico')  }}">
     </head>
 
     <body>
+
         <div id="heading">
             <h2 class="mWel">Welcome!</h2>
         </div>
 
+
+<div id="mForm">
         <form action="/" method="post">
             <br>
 
-            <label for="TERM">Whats your favorite food? </label>
-            <input id="TERM" type="text" name="term" placeholder="sushi, mexican, etc."><br>
+            <label for="TERM">Whats your favorite food?&nbsp;</label>
+            <input id="TERM" type="text" name="term" placeholder="Sushi, Mexican, etc."><br>
             <br>
 
-            <label for="LOCATION">What is your location? </label>
+            <label for="LOCATION">What is your location?&nbsp;</label>
             <input id="LOCATION" type="text" name="location" placeholder="San Francisco, CA"><br>
 
             <br>
 
             <h3>What is your price range?</h3>
-            <input type="radio" name="price" value="1" checked> $<br>
-            <input type="radio" name="price" value="2"> $$ <br>
-            <input type="radio" name="price" value="3"> $$$ <br>
-            <input type="radio" name="price" value="4"> $$$$ <br>
+            <input id="inputQues" type="radio" name="price" value="1" checked><label for="inputQues" style="color:white;">&nbsp;$</label><br>
+            <input id="inputQues" type="radio" name="price" value="2"><label for="inputQues" style="color:white;">&nbsp;$$</label><br>
+            <input id="inputQues" type="radio" name="price" value="3"><label for="inputQues" style="color:white;">&nbsp;$$$</label><br>
+            <input id="inputQues" type="radio" name="price" value="4"><label for="inputQues" style="color:white;">&nbsp;$$$$</label><br>
 
             <br>
 
             <h3>Only show currently open restuarants?</h3>
-            <input type="radio" name="open" value="true" checked>Only show currently open<br>
-            <input type="radio" name="open" value="false">Order when open<br>
+            <input id="inputQues" type="radio" name="open" value="true" checked><label for="inputQues" style="color:white;">&nbsp;Only show currently open</label><br>
+            <input id="inputQues" type="radio" name="open" value="false"><label for="inputQues" style="color:white;">&nbsp;Order when open</label><br>
 
-            <br><br><br>
+            <br><br>
 
             <input type="submit" value="Submit">
         </form>
-
+</div>
     </body>
 
 

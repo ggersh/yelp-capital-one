@@ -18,7 +18,7 @@ def my_form_post():
 	open_now = request.form['open']
 	print(term, location, price, open_now)
 	searches = query_api(term=term, location=location,price=price,open_now=open_now)
-	return render_template('results.html', location = location, data=searches)
+	return render_template('results.html', location = location, term = term, data=searches)
 
 
 if __name__ == "__main__":
