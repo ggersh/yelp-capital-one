@@ -8,46 +8,56 @@
         <link href="{{  url_for('static', filename='css/bootstrap.min.css')  }}" rel="stylesheet">
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='zb.css') }}">
         <link rel="shortcut icon" href="{{  url_for('static', filename='favicon.ico')  }}">
+        <link href="{{  url_for('static', filename='css/stylerb.css')  }}" rel="stylesheet">
+
     </head>
 
     <body>
 
-        {% if not data == None %}
+        {% if data is defined and data | length > 0  %}
 
         <h1>
             Showing results for {{term}} in {{location}}!
         </h1>
 
 
-        <table class="rwd-table">
-        <tr>
-            <th align="center">Name</th>
-            <th align="center">Rating</th>
-            <th align="center">Location</th>
-            <th align="center">Phone #</th>
-            <th align="center">Specialty</th>
-        </tr>
+        <!-- <div>{{ pagination.info }}</div> -->
 
-        {% for i in data %}
 
-        <tr>
-            <td data-th="Name">{{i.name}}</td>
-            <td data-th="Rating">{{i.rating}}</td>
-            <td data-th="Address">{{i.location.address1}}</td>
-            <td data-th="Phone#">{{i.phone}}</td>
-            <td data-th="Category">{{i.categories[0].title}}</td>
-        </tr>
+        <div style="overflow-x: scroll">
+            <table class="rwd-table table table-responsive">
+                <thead>
+                    <th align="center">Name</th>
+                    <th align="center">Rating</th>
+                    <th align="center">Location</th>
+                    <th align="center">Phone #</th>
+                    <th align="center">Specialty</th>
+                </thead>
+                <tbody>
+                    {% for i in data %}
+                    <tr>
+                        <td data-th="Name">{{i.name}}</td>
+                        <td data-th="Rating">{{i.rating}}</td>
+                        <td data-th="Address">{{i.location.address1}}</td>
+                        <td data-th="Phone#">{{i.phone}}</td>
+                        <td data-th="Category">{{i.categories[0].title}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
 
-        {% endfor %}
-        </table>
+        <div class="text-center" style="margin-top: 20px auto">{{ pagination.links }}</div>
+
         {% else %}
 
         <h1 id="error">
             No results found near {{location}}!
         </h1>
         {% endif %}
-
-        <p id="CR">Copyright &copy; 2017 Greg Gershkowitz All Rights Reserved.</p>
+        <div class="footer">
+            <p style="margin:0">Copyright &copy; 2017 Greg Gershkowitz All Rights Reserved.sdsf</p>
+        </div>
     </body>
 
 
