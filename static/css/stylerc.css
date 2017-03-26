@@ -79,5 +79,7 @@ body{padding-top:50px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;}
     text-align: center;
     /*background-color: rgb(35,31,32);*/
     z-index: 5;
-
+}
+.spacer{
+    padding: 10px;
 }

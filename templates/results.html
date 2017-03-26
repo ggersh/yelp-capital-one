@@ -8,7 +8,7 @@
         <link href="{{  url_for('static', filename='css/bootstrap.min.css')  }}" rel="stylesheet">
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='zb.css') }}">
         <link rel="shortcut icon" href="{{  url_for('static', filename='favicon.ico')  }}">
-        <link href="{{  url_for('static', filename='css/stylerb.css')  }}" rel="stylesheet">
+        <link href="{{  url_for('static', filename='css/stylerc.css')  }}" rel="stylesheet">
 
     </head>
 
@@ -46,15 +46,16 @@
                 </tbody>
             </table>
         </div>
-
+    <div class="spacer">
         <div class="text-center" style="margin-top: 20px auto">{{ pagination.links }}</div>
-
+    </div>
         {% else %}
 
         <h1 id="error">
             No results found near {{location}}!
         </h1>
         {% endif %}
+
         <div class="footer">
             <p style="margin:0">Copyright &copy; 2017 Greg Gershkowitz All Rights Reserved.sdsf</p>
         </div>
