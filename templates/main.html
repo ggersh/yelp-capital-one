@@ -6,23 +6,19 @@
         <meta name="viewport" content="width=device-width,
         initial-scale=1">
         <link href="{{  url_for('static', filename='css/bootstrap.min.css')  }}" rel="stylesheet">
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='zb.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
         <link rel="shortcut icon" href="{{  url_for('static', filename='favicon.ico')  }}">
-        <link href="{{  url_for('static', filename='css/stylerc.css')  }}" rel="stylesheet">
+        <link href="{{  url_for('static', filename='css/paginate.css')  }}" rel="stylesheet">
     </head>
-
     <body>
-
         <div id="heading">
             <h2 class="mWel">Chow Time</h2>
         </div>
-
-
-<div id="mForm">
-        <form action="/search" method="post">
+        <div id="mForm">
+            <form action="/search" method="post">
             <br>
 
-            <label for="TERM">Whats your favorite food?&nbsp;</label>
+            <label for="TERM">What's your favorite food?&nbsp;</label>
             <input id="TERM" type="text" name="term" placeholder="Sushi, Mexican, etc."><br>
             <br>
 
@@ -46,11 +42,10 @@
             <br><br>
 
             <input type="submit" value="Submit">
-        </form>
-</div>
-<div class="footer">
-    <p style="margin:0">Copyright &copy; 2017 Greg Gershkowitz All Rights Reserved</p>
-</div>
+            </form>
+        </div>
+        <div class="footer">
+            <p style="margin:0">Copyright &copy; 2017 Greg Gershkowitz All Rights Reserved</p>
+        </div>
     </body>
-
 </html>

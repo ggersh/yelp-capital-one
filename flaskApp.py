@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, url_for, redirect, flash,  g, current_app
 import requests
 import json
-from capSumm import query_api
+from fusionAPI import query_api
 
 # pagination extension since yelp api doesn't directly offer pagination
 from flask_paginate import Pagination, get_page_args
@@ -30,9 +30,9 @@ def my_form_post():
 		if not result:
 			result = []
 		# cache this result so we can paginate through it
-		cache['searches'] = result 
-		cache['location'] = location 
-		cache['term'] = term 
+		cache['searches'] = result
+		cache['location'] = location
+		cache['term'] = term
 	if 'searches' not in cache:
 		# user reloads search page
 		return redirect(url_for('index'))
@@ -47,34 +47,8 @@ def my_form_post():
 
 	# print(json.dumps(searches, sort_keys = False, indent = 2))
 
-
-
-
-
 def get_css_framework():
     return current_app.config.get('CSS_FRAMEWORK', 'bootstrap3')
-
-
-# def get_link_size():
-#     return current_app.config.get('LINK_SIZE', 'sm')
-
-
-# def show_single_page_or_not():
-#     return current_app.config.get('SHOW_SINGLE_PAGE', False)
-
-
-# def get_pagination(**kwargs):
-#     kwargs.setdefault('record_name', 'records')
-#     return Pagination(css_framework=get_css_framework(),
-#                       link_size=get_link_size(),
-#                       show_single_page=show_single_page_or_not(),
-#                       **kwargs
-#                       )
-
-
-
-
-
 
 
 if __name__ == "__main__":

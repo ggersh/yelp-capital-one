@@ -54,13 +54,12 @@ body{padding-top:50px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;}
     text-align: center;
     color: white;
 }
-.pagination-page-info b {
-    color: black;
+/*.pagination-page-info b {
     background: #6aa6ed;
     padding-left: 2px;
     padding: .1em .25em;
     font-size: 150%;
-}
+}*/
 
 .table.rwd-table {
     width: 80%;

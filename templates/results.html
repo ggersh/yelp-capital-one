@@ -6,12 +6,11 @@
         <meta name="viewport" content="width=device-width,
         initial-scale=1">
         <link href="{{  url_for('static', filename='css/bootstrap.min.css')  }}" rel="stylesheet">
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='zb.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
         <link rel="shortcut icon" href="{{  url_for('static', filename='favicon.ico')  }}">
-        <link href="{{  url_for('static', filename='css/stylerc.css')  }}" rel="stylesheet">
+        <link href="{{  url_for('static', filename='css/paginate.css')  }}" rel="stylesheet">
 
     </head>
-
     <body>
 
         {% if data is defined and data | length > 0  %}
@@ -19,10 +18,6 @@
         <h1>
             Showing results for {{term}} in {{location}}!
         </h1>
-
-
-        <!-- <div>{{ pagination.info }}</div> -->
-
 
         <div>
             <table class="rwd-table table table-responsive">
@@ -48,17 +43,17 @@
         </div>
     <div class="spacer">
         <div class="text-center" style="margin-top: 20px auto">{{ pagination.links }}</div>
+        <div>{{ pagination.info }}</div>
     </div>
         {% else %}
-
         <h1 id="error">
             No results found near {{location}}!
         </h1>
         {% endif %}
-
         <div class="footer">
             <p style="margin:0">Copyright &copy; 2017 Greg Gershkowitz All Rights Reserved</p>
         </div>
+
     </body>
 
 

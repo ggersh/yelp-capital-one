@@ -51,7 +51,7 @@ TOKEN_PATH = '/oauth2/token'
 GRANT_TYPE = 'client_credentials'
 
 
-# Defaults for our simple example.
+# Defaults
 DEFAULT_TERM = 'sushi'
 DEFAULT_LOCATION = 'San Francisco, CA'
 OPEN_NOW = True
@@ -172,30 +172,3 @@ def query_api(term, location, open_now, price):
     #
     # print(u'Result for business "{0}" found:'.format(business_id))
     # pprint.pprint(response, indent=2)
-
-
-
-
-def main():
-
-
-    r = requests.get(location = location)
-
-    print(r)
-
-
-# SEARCHES USING TERM AND LOCATION
-    try:
-        query_api(input_values.term, input_values.location, input_values.open_now, input_values.price)
-    except HTTPError as error:
-        sys.exit(
-            'Encountered HTTP error {0} on {1}:\n {2}\nAbort program.'.format(
-                error.code,
-                error.url,
-                error.read(),
-            )
-        )
-
-
-if __name__ == '__main__':
-    main()

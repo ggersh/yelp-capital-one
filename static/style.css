@@ -59,7 +59,7 @@ form{
 }
 
 body {
-    background: url(free-wallpaper-24.jpg) no-repeat center center fixed;
+    background: url(backgroundPicture.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -97,7 +97,7 @@ tbody tr {
   transition: background 0.25s ease;
 }
 tbody tr:hover {
-  background: #4F4F51;
+  background: #4f8683;
 }
 #CR{
     color: white;
@@ -109,4 +109,13 @@ tbody tr:hover {
     text-align:center;
     left: 36%;
     padding-top: 40px;
+}
+.topBar {
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    background: black;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
