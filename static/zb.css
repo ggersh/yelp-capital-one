@@ -14,18 +14,18 @@ h3 {
     color: white;
 }
 .mWel{
-    color: #D12E32;
+    color: #337ab7;
     text-align: center;
     font-size: 42px;
-    text-shadow: 0 0 3px #d12e31;
+    text-shadow: 0 0 3px #286090;
     font-family: helvetica;
     padding: 5px;
 }
 h1{
-    color: #D12E32;
+    color: #337ab7;
     text-align: center;
     font-size: 37px;
-    text-shadow: 0 0 3px #d12e31;
+    text-shadow: 0 0 3px #286090;
     font-family: helvetica;
     /*padding: 5px;*/
 }
@@ -78,9 +78,9 @@ table {
   /*transform: translate(-50%, -50%);*/
 }
 th {
-  border-bottom: 1px solid #364043;
-  color: #E2B842;
-  font-size: 1em;
+  border-bottom: 1px solid #179c8c;
+  color: antiquewhite;
+  font-size: 1.25em;
   font-weight: 600;
   padding: 0.5em 1em;
   text-align: left;
@@ -97,7 +97,7 @@ tbody tr {
   transition: background 0.25s ease;
 }
 tbody tr:hover {
-  background: #014055;
+  background: #4F4F51;
 }
 #CR{
     color: white;
