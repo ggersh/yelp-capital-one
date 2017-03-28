@@ -32,7 +32,7 @@
                 </thead>
                 <tbody>
                     {% for i in data %}
-                    <tr>
+                    <tr onclick="window.document.location='{{i.url}}';">
                         <td data-th="Name">{{i.name}}</td>
                         <td align="center" valign="middle" data-th="Rating">{{i.rating}}</td>
                         <td data-th="Address">{{i.location.address1}}</td>
