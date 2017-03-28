@@ -27,6 +27,8 @@
                     <th align="center">Location</th>
                     <th align="center">Phone #</th>
                     <th align="center">Specialty</th>
+                    <th align="center">Distance</th>
+                    <th align="center">runTimes</th>
                 </thead>
                 <tbody>
                     {% for i in data %}
@@ -36,6 +38,8 @@
                         <td data-th="Address">{{i.location.address1}}</td>
                         <td data-th="Phone#">{{i.phone}}</td>
                         <td data-th="Category">{{i.categories[0].title}}</td>
+                        <td data-th="Distance">{{i.distance}}</td>
+                        <td data-th="run_times">{{run_times[loop.index0]}}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
