@@ -67,17 +67,18 @@ body{padding-top:50px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;}
 }
 
 .footer {
-    position: fixed;
+    /*position: fixed;*/
     bottom: 0;
     font-family: helvetica;
     font-size: 16px;
     left: 0;
     right: 0;
     color: white;
-    padding: 10px 0;
+    margin-top: 10px;
     text-align: center;
     /*background-color: rgb(35,31,32);*/
     z-index: 5;
+    margin-bottom: 10px;
 }
 .spacer{
     padding: 10px;
