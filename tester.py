@@ -23,11 +23,10 @@ def convertToSeconds(time):
 	min, sec = time.split(':')
 	return int(min) * 60 + int(sec)
 
-# def main():
-# 	t = "6:08"
-# 	d = 5000
-# 	a = findTimeTest(t, d)
-# 	print a
-#
-# if __name__ == '__main__':
-#     main()
+def convertDistToMiles(data):
+	miles = []
+	for i in data:
+		milesD = i.get('distance')*0.000621371192;
+		mile = '%.3f'%(milesD)
+		miles.append(mile)
+	return miles

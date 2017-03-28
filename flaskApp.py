@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, url_for, redirect, flash,  g,
 import requests
 import json
 from fusionAPI import query_api
-from tester import findTimeTest
+from tester import findTimeTest, convertDistToMiles
 
 # pagination extension since yelp api doesn't directly offer pagination
 from flask_paginate import Pagination, get_page_args
@@ -31,6 +31,7 @@ def my_form_post():
     	# print(term, location, price, open_now)
         result = query_api(term=term, location=location,price=price,open_now=open_now)
         run_times = findTimeTest(time = time, data = result)
+        miles = convertDistToMiles(data = result)
         if not result:
     		result = []
     	# cache this result so we can paginate through it
@@ -38,6 +39,7 @@ def my_form_post():
         cache['location'] = location
         cache['term'] = term
         cache['run_times'] = run_times
+        cache['miles'] = miles
     if 'searches' not in cache:
     	# user reloads search page
     	return redirect(url_for('index'))
@@ -48,8 +50,10 @@ def my_form_post():
     location = cache['location']
     term = cache['term']
     run_times = cache['run_times'][start_index:end_index]
+    miles = cache['miles'][start_index:end_index]
+
     pagination = Pagination(css_framework='bootstrap3', page=page, per_page=PER_PAGE, total=len(cache['searches']), search=search, record_name='searches')
-    return render_template('results.html', location = location, term = term, data=page_data, pagination=pagination, run_times=run_times)
+    return render_template('results.html', location = location, term = term, data=page_data, pagination=pagination, run_times=run_times, miles=miles)
 
 	# print(json.dumps(searches, sort_keys = False, indent = 2))
 
