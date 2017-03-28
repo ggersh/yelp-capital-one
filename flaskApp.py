@@ -34,7 +34,7 @@ def my_form_post():
         if not result:
     		result = []
     	# cache this result so we can paginate through it
-        cache['searches'] = result 
+        cache['searches'] = result
         cache['location'] = location
         cache['term'] = term
         cache['run_times'] = run_times

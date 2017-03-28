@@ -11,7 +11,7 @@ def findTimeTest(time, data):
 		hours, sec =  secondsTotal // 3600, secondsTotal % 3600
 		min, sec = sec // 60, sec % 60
 	 	if (min == 0):
-			time = str(int(sec))
+			time = str(int(sec))+"s"
 		elif (hours == 0):
 			time = str(int(min))+'m:'+str(int(sec))+"s"
 		else:
