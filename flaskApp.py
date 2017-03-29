@@ -51,7 +51,6 @@ def my_form_post():
     term = cache['term']
     run_times = cache['run_times'][start_index:end_index]
     miles = cache['miles'][start_index:end_index]
-
     pagination = Pagination(css_framework='bootstrap3', page=page, per_page=PER_PAGE, total=len(cache['searches']), search=search, record_name='searches')
     return render_template('results.html', location = location, term = term, data=page_data, pagination=pagination, run_times=run_times, miles=miles)
 
