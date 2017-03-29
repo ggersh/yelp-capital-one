@@ -56,6 +56,7 @@ DEFAULT_TERM = 'sushi'
 DEFAULT_LOCATION = 'San Francisco, CA'
 OPEN_NOW = True
 PRICE = '1'
+SORT_BY = 1
 SEARCH_LIMIT = 50
 
 
@@ -125,7 +126,8 @@ def search(bearer_token, term, location, open_now, price):
         'location': location.replace(' ', '+'),
         'open_now': open_now,
         'price': price.replace(' ', '+'),
-        'limit': SEARCH_LIMIT
+        'limit': SEARCH_LIMIT,
+        'sort_by': 'distance'
     }
     return request(API_HOST, SEARCH_PATH, bearer_token, url_params=url_params)
 

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,16 +15,21 @@
         <div id="heading">
             <h2 class="mWel">Run Time</h2>
         </div>
+
         <div id="mForm">
+
+        <p id="demo"></p>
             <form action="/search" method="post">
             <br>
 
             <label for="TERM">What's your favorite food?&nbsp;</label>
-            <input id="TERM" type="text" name="term" placeholder="Sushi, Mexican, etc."><br>
+            <input id="TERM" type="text" name="term" placeholder="Sushi, Mexican, etc.">
+            <br>
             <br>
 
             <label for="LOCATION">What is your location?&nbsp;</label>
-            <input size="40" id="LOCATION" type="text" name="location" placeholder="1600 Pennsylvania Ave, Washington, DC"><br>
+            <input size="40" id="LOCATION" type="text" name="location" placeholder="1600 Pennsylvania Ave, Washington, DC">
+            <button type="button" onclick="myFunction()">Get Location</button><br>
             <br>
 
             <label for="TIME">What is your fastest mile time?&nbsp;</label>
@@ -39,7 +45,7 @@
 
             <br>
 
-            <h3>Only show currently open restuarants?</h3>
+            <h3>Only show currently open restaurants?</h3>
             <input id="inputQues" type="radio" name="open" value="true" checked><label for="inputQues" style="color:white;">&nbsp;Only show currently open</label><br>
             <input id="inputQues" type="radio" name="open" value="false"><label for="inputQues" style="color:white;">&nbsp;Order when open</label><br>
 
@@ -47,10 +53,19 @@
 
             <input type="submit" value="Submit">
             </form>
-            
+
         </div>
         <div class="footer">
             <p style="margin:0">Copyright &copy; 2017 Greg Gershkowitz All Rights Reserved</p>
         </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>
+            function myFunction() {
+                $.get("http://ip-api.com/json", function (response) {
+                        $("#LOCATION").val(response.countryCode+", "+response.city+" "+response.regionName);
+                    }, "jsonp");
+            }
+        </script>
     </body>
 </html>
