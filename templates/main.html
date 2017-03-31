@@ -10,7 +10,6 @@
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
         <link rel="shortcut icon" href="{{  url_for('static', filename='favicon.ico')  }}">
         <link href="{{  url_for('static', filename='css/paginate.css')  }}" rel="stylesheet">
-
     </head>
     <body>
         <div id="heading">
@@ -39,10 +38,10 @@
             <br>
 
             <h3>What's in your wallet?</h3>
-            <input id="inputQues" type="radio" name="price" value="1" checked><label for="inputQues" style="color:white;">&nbsp;$</label><br>
-            <input id="inputQues" type="radio" name="price" value="1,2"><label for="inputQues" style="color:white;">&nbsp;$$</label><br>
-            <input id="inputQues" type="radio" name="price" value="1,2,3"><label for="inputQues" style="color:white;">&nbsp;$$$</label><br>
-            <input id="inputQues" type="radio" name="price" value="1,2,3,4"><label for="inputQues" style="color:white;">&nbsp;$$$$</label><br>
+            <input id="inputQues" type="radio" name="price" value="1" checked><label for="inputQues" style="color:white;">&nbsp;under $10</label><br>
+            <input id="inputQues" type="radio" name="price" value="1,2"><label for="inputQues" style="color:white;">&nbsp;$11-$30</label><br>
+            <input id="inputQues" type="radio" name="price" value="1,2,3"><label for="inputQues" style="color:white;">&nbsp;$31-$60</label><br>
+            <input id="inputQues" type="radio" name="price" value="1,2,3,4"><label for="inputQues" style="color:white;">&nbsp;above $61</label><br>
 
             <br>
 
@@ -60,7 +59,8 @@
             <p style="margin:0">Copyright &copy; 2017 Greg Gershkowitz All Rights Reserved</p>
         </div>
         <div id=map></div>
-        <script>
+    <script>
+
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
       // failed.", it means you probably did not give permission for the browser to
@@ -83,14 +83,12 @@ function myLoc() {
       });
     } else {
       // Browser doesn't support Geolocation
-      console.log("Borwser doesn't support Geolocaiton");
+      console.log("Browser doesn't support Geolocation");
       myBackupLocation();
     }
 }
-
     </script>
 
-        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>
             function myBackupLocation() {

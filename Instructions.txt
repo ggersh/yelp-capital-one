@@ -1,10 +1,7 @@
-tracing use of natural numbers
+Dear Paula,
 
-hashing through linked lists
-	-meeting #14
-	-Set4:set with hashing
-	-understand correspondence
-binary search/binary trees
+That is terrific news and I am more than appreciative of the opportunity!  Could I have a day to consider?  I am expecting two other offers in the next day and would like to be able to weigh my options to make the best decision for my career.
 
-sorting machine with heap-sort
+Sincerely,
 
+Greg

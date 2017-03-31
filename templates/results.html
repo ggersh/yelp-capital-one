@@ -15,9 +15,17 @@
 
         {% if data is defined and data | length > 0  %}
 
+        {% if '.' in location %}
+        <h1>
+            Showing results for {{term}} by your location!
+        </h1>
+        {%else%}
         <h1>
             Showing results for {{term}} by {{location}}!
         </h1>
+        {% endif %}
+
+
 
         <div>
             <table class="rwd-table table table-responsive">
