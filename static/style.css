@@ -59,7 +59,7 @@ form{
 }
 
 body {
-    background: url(static/Glasgow.jpg) no-repeat center center fixed;
+    background: url(https://strawberry-custard-77322.herokuapp.com/static/Glasgow.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
