@@ -33,7 +33,7 @@ h1{
     margin: auto;
     width: 50%;
     border: 2px solid #1f1f14;
-    background-color: #464955;
+    background-color: #385169;
     padding: 0px;
     height:550px;
     border-radius: 5%;
@@ -97,7 +97,9 @@ tbody tr {
   transition: background 0.25s ease;
 }
 tbody tr:hover {
-  background: #4f8683;
+  background: #385169;
+  cursor: pointer;
+  opacity: .9;
 }
 #CR{
     color: white;
@@ -118,7 +120,4 @@ tbody tr:hover {
     top: 0;
     left: 0;
     z-index: 100;
-}
-tr {
-    cursor: pointer;
 }
