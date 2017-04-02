@@ -61,4 +61,4 @@ def get_css_framework():
 
 
 if __name__ == "__main__":
-    app.run(debug=False,port=80)
+    app.run(debug=True)
