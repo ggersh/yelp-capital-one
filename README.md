@@ -1,3 +1,5 @@
+"We’ve spent the past weeks sorting through source code and hundreds of impressive resumes from all over the US to identify the 40 best applicants to bring to D.C. for the Summit, and you are part of that 40!" - Capital One
+
 https://strawberry-custard-77322.herokuapp.com/
 
 My winning work for the Capital One Summit for Software Engineers coding challenge, part 2 of their application for their Summit for Software Engineers.
